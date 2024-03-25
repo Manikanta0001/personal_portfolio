@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const handleDownloadResume = () => {
-  const resumeUrl = '../assets/resume-ats.pdf';
+  const resumeUrl = '../assets/Manikanta_Balaga_resume1.pdf';
   const link = document.createElement('a');
   link.href = resumeUrl;
   link.setAttribute('download', 'Manikanta_Balaga_Resume.pdf');
