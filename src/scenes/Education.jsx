@@ -44,7 +44,7 @@ const Education = () => {
            
 <p className="font-bold text-deep-blue2">RBVRR Institute of Tech. , Abids, Hyderabad.</p>
 Master of Computer Applications (MCA), 
-<p>[Dec 2021 - Sept 2024]</p>
+
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ Master of Computer Applications (MCA),
           <p className="font-bold text-deep-blue2">Pragathi Degree & PG college, KPHB</p>
 Bachelor of Science (MSCs),
 8.59 CGPA
-<p>[June 2018 - April 2021]</p>
+
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ Bachelor of Science (MSCs),
           <p className="text-center text-xl">
           <p className="font-bold text-deep-blue2">Zilla Parishad High School, Gundlapochampally</p>
  <p>SSC Board,Telangana.</p> 8.5 CGPA
- <p>[till March 2015]</p>
+ 
           </p>
         </motion.div>
       </div>
