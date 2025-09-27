@@ -11,7 +11,7 @@ const MySkills = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationKey((prev) => prev + 1); // change key to remount motion spans
-    }, 4000); // ✅ 30 seconds (changed from 5000)
+    }, 5000); // ✅ 30 seconds (changed from 5000)
     return () => clearInterval(interval);
   }, []);
 
