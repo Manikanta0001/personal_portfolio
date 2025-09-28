@@ -3,6 +3,7 @@ import Landing from "./scenes/Landing";
 import DotGroup from "./scenes/DotGroup";
 import MySkills from "./scenes/MySkills";
 // import LineGradient from "./components/LineGradient";
+import WorkExperience from "./scenes/WorkExperience";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
@@ -30,7 +31,6 @@ function App() {
 
   return (
     <div className="app bg-light-blue">
-      
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -61,6 +61,16 @@ function App() {
           <MySkills />
         </motion.div>
       </div>
+      <div className="w-5/6 mx-auto md:h-full mt-20 md:mt-52">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("workexperience")}
+        >
+          <WorkExperience />
+        </motion.div>
+      </div>
+
       {/* <LineGradient /> */}
       <div className="w-5/6 mx-auto">
         <motion.div

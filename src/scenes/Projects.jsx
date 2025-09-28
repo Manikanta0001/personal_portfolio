@@ -75,9 +75,8 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          As a fresh developer, I've showcased my skills with projects like an Admin dashboard,
-          Spotify clone, and personal portfolio.
+        <p className="mt-2 mb-10">
+          As an entry level developer, I've showcased my skills with projects like an Sankhya Hospital Website, Admin Dashboard and Maintenance Request System
         </p>
       </motion.div>
 

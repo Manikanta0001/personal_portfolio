@@ -25,9 +25,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-2`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-      <div className="w-8 h-8 rounded-full overflow-hidden">
-  {/* <img src="./assets/logo-mb2.png" className="w-full h-full object-cover" alt="Logo" /> */}
-</div>
+        <div className="w-8 h-8 rounded-full overflow-hidden">
+          {/* <img src="./assets/logo-mb2.png" className="w-full h-full object-cover" alt="Logo" /> */}
+        </div>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
@@ -39,6 +39,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             />
             <Link
               page="Skills"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="WorkExperience"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -69,7 +74,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* MOBILE MENU POPUP */}
         {!isDesktop && isMenuToggled && (
-          <div className="fixed right-2 top-2 h-[230px] bg-black w-[150px] rounded-lg">
+          <div className="fixed right-2 top-2 h-[250px] bg-black w-[160px] rounded-lg">
             {/* CLOSE ICON */}
             <div className="flex justify-end p-2">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -78,7 +83,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </div>
 
             {/* MENU ITEMS */}
-            <div className="flex flex-col gap-2 ml-[20%] text-lg text-white">
+            <div className="flex flex-col gap-2 ml-[15%] text-md text-white">
               <Link
                 page="Home"
                 selectedPage={selectedPage}
@@ -86,6 +91,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               />
               <Link
                 page="Skills"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="WorkExperience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
