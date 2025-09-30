@@ -34,7 +34,7 @@ module.exports = {
       content: {
         brush: "url('./assets/brush.png')",
         person1: "url('./assets/rbvrrit-small5.png')",
-        person2: "url('./assets/pragathi-small.png')",
+        person2: "url('./assets/pragathiLogo-rounded.jpg')",
         person3: "url('./assets/zphs-small.png')",
       },
     },
