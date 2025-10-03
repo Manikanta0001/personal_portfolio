@@ -48,7 +48,7 @@ const Landing = ({ setSelectedPage }) => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
@@ -93,7 +93,7 @@ const Landing = ({ setSelectedPage }) => {
           className="flex mt-5 justify-center md:justify-start gap-4"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ delay: 0.2, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
@@ -146,7 +146,7 @@ const Landing = ({ setSelectedPage }) => {
           className="flex mt-3 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ delay: 0.4, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
@@ -187,7 +187,7 @@ const Landing = ({ setSelectedPage }) => {
           className="flex mt-1 justify-center md:justify-start"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ delay: 0.4, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },

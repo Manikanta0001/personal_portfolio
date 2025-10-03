@@ -8,7 +8,7 @@ const WorkExperience = () => {
         className="md:w-7/8 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.6 }}
         variants={{
           hidden: { opacity: 0, y: 30 },

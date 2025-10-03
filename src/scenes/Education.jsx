@@ -5,7 +5,7 @@ const educationData = [
   {
     id: 1,
     degree: "Master of Computer Applications (MCA)",
-    college: "RBVRR Institute of Technology, Hyderabad",
+    college: "RBVRR Institute of Technology, Abids, Hyderabad",
     score: "8.27 CGPA",
     year: "",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
@@ -13,7 +13,7 @@ const educationData = [
   {
     id: 2,
     degree: "Bachelor of Science (MSCs)",
-    college: "Pragathi Degree & PG College, KPHB",
+    college: "Pragathi Degree & PG College, KPHB, Hyderabad",
     score: "8.59 CGPA",
     year: "",
     gradient: "from-cyan-500 via-blue-500 to-indigo-500",
@@ -60,14 +60,14 @@ const Education = () => {
               y: -10,
               transition: { duration: 0.15, ease: "easeOut" }, // ⚡ faster hover animation
             }}
-            className={`relative bg-gradient-to-r ${edu.gradient} rounded-3xl w-[320px] h-[300px] flex flex-col justify-center items-center text-center shadow-xl shadow-gray-800/30 hover:shadow-2xl hover:shadow-gray-900/40 transition-all duration-300`}
+            className={`relative bg-gradient-to-r ${edu.gradient} rounded-3xl w-[240px] h-[220px] flex flex-col justify-center items-center text-center shadow-xl shadow-gray-800/30 hover:shadow-2xl hover:shadow-gray-900/40 transition-all duration-300`}
           >
             {/* Glass effect overlay */}
             <div className="absolute inset-0 bg-black/40 rounded-3xl backdrop-blur-md border border-white/10" />
 
             {/* Content */}
             <div className="relative z-10 px-6">
-              <h3 className="font-semibold text-xl text-white mb-2 tracking-wide drop-shadow-md">
+              <h3 className="font-semibold text-lg text-white mb-2 tracking-wide drop-shadow-md">
                 {edu.degree}
               </h3>
               <p className="text-gray-100 text-sm mb-1 font-light">

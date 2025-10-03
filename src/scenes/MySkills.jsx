@@ -7,11 +7,11 @@ const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   const [animationKey, setAnimationKey] = useState(0);
 
-  // Trigger animation rerender every 30 seconds
+  // 🔁 Re-trigger skill bar animation every 5 seconds (or set to 30s if needed)
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationKey((prev) => prev + 1); // change key to remount motion spans
-    }, 5000); // ✅ 30 seconds (changed from 5000)
+      setAnimationKey((prev) => prev + 1);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -30,15 +30,22 @@ const MySkills = () => {
   ];
 
   const renderBar = (skill, index) => (
-    <div key={index} className="overflow-x-hidden">
+    <motion.div
+      key={index}
+      className="overflow-x-hidden"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+    >
       <p className="text-sm uppercase font-medium">{skill.label}</p>
       <span className="w-full h-2 bg-black bg-opacity-40 rounded-md inline-flex mt-2 relative">
         <motion.span
-          key={animationKey} // This forces remount => retrigger animation
+          key={animationKey} // triggers width animation again
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2, delay: 0 }}
-          style={{ width: skill.percent }} // ✅ dynamic width handled here
+          transition={{ duration: 2 }}
+          style={{ width: skill.percent }}
           className="h-full bg-gradient-to-r from-blue via-pink-500 to-red2 rounded-md relative"
         >
           <span className="absolute -top-6 right-0 text-xs font-semibold text-gray-800">
@@ -46,23 +53,20 @@ const MySkills = () => {
           </span>
         </motion.span>
       </span>
-    </div>
+    </motion.div>
   );
 
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
+        {/* Left Text Section */}
         <motion.div
           className="md:w-1/3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           <p className="font-playfair font-semibold text-4xl mb-5">
             MY <span className="text-red">SKILLS</span>
@@ -74,7 +78,14 @@ const MySkills = () => {
           </p>
         </motion.div>
 
-        <div className="mt-16 md:mt-0">
+        {/* Right Image Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16 md:mt-0"
+        >
           {isAboveLarge ? (
             <div className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]">
               <img alt="skills" className="z-10" src="assets/skills-image.png" />
@@ -82,11 +93,17 @@ const MySkills = () => {
           ) : (
             <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
-        </div>
+        </motion.div>
       </div>
 
       {/* SKILLS SECTION */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <motion.div
+        className="md:flex md:justify-between mt-16 gap-32"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+      >
         {/* Web Development */}
         <div className="w-full bg-cover">
           <h4 className="text-1xl md:text-1xl font-bold">Web Development</h4>
@@ -102,7 +119,7 @@ const MySkills = () => {
             {skillBarsRight.map(renderBar)}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
