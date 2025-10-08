@@ -29,7 +29,7 @@ const Landing = ({ setSelectedPage }) => {
           >
             <img
               alt="profile"
-              className="hover:filter hover:hue-rotate-90 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[450px] rounded-[400px]"
+              className=" w-full max-w-[400px] md:max-w-[450px] rounded-[400px]"
               src={ManikantaImage}
             />
           </div>
@@ -82,8 +82,8 @@ const Landing = ({ setSelectedPage }) => {
     hover:scale-105 hover:text-blue-400 hover:drop-shadow-lg
   "
           >
-            Enthusiastic and dedicated aspiring React developer, passionate
-            about crafting engaging user experiences
+            Enthusiastic and dedicated React Js developer committed to delivering dynamic, user-centric,
+             and impactful web experiences
           </p>
         </motion.div>
 
